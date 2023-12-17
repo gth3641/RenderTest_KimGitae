@@ -24,9 +24,10 @@ public:
 
 	//텍스처 크기
 	UPROPERTY(EditAnywhere, Category = "Texture Rsolution")
-		FIntPoint TextureResolution;
+		FIntPoint _textureResolution;
 
 	//랜덤화 시드
 	UPROPERTY(EditAnywhere, Category = "RandomSeed")
-		float salt;
+		float _salt;
+
 };

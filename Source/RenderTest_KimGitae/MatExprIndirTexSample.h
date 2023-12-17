@@ -19,6 +19,18 @@ public:
 	UPROPERTY(EditAnywhere)
 		UIndirectTexture* _indirectTexture;
 
+	UPROPERTY(EditAnywhere, Category = "Index Texture")
+		UTexture2D* _indexTexture;
+
+	UPROPERTY(meta = (RequiredInput = "false", ToolTip = "Index Texture"))
+		FExpressionInput IndexTextureInput;
+
+	UPROPERTY(meta = (RequiredInput = "false", ToolTip = "Tile Count"))
+		FExpressionInput TileCntInput;
+
+	UPROPERTY(meta = (RequiredInput = "false", ToolTip = "Texture Resolution"))
+		FExpressionInput TexResolInput;
+
 public:
 
 	virtual int32 Compile(class FMaterialCompiler* Compiler, int32 OutputIndex) override;
@@ -33,5 +45,4 @@ public:
 	}
 
 	virtual bool CanReferenceTexture() const override { return true; }
-
 };
